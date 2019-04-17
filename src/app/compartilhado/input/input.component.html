@@ -1,0 +1,9 @@
+<div class="md-form">
+  <ng-content></ng-content>
+  <div *ngIf="showTip && hasSucess()" class="valid-feedback">
+    Tudo certo!
+  </div>
+  <div *ngIf="showTip && hasError()" class="invalid-feedback">
+    {{errorMessage}}
+  </div>
+</div>

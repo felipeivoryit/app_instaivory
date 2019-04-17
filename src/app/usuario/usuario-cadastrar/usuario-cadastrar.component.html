@@ -1,0 +1,53 @@
+<app-menu></app-menu>
+
+<section id="section-usuario">
+
+  <!-- Card -->
+  <div class="card m-2 animated fadeInDown">
+    <!-- Default form contact -->
+    <form [formGroup]="usuarioForm" class="text-center border border-light p-3">
+
+      <p class="h4 mb-4">Cadastro</p>
+      <hr>
+
+      <app-input errorMessage="Campo obrigatório">
+        <!-- Name -->
+        <input id="nome" type="text" formControlName="nome" class="form-control" placeholder="Nome" autocomplete="off">
+      </app-input>
+
+      <app-input errorMessage="Campo obrigatório">
+          <input formControlName="senha" type="password" class="form-control" placeholder="Senha" autocomplete="off">
+      </app-input>
+
+      <app-input errorMessage="Campo obrigatório">
+          <input formControlName="senhaConfimacao" type="password" class="form-control" placeholder="Confirmação senha" autocomplete="off">
+      </app-input>
+    
+      <app-input errorMessage="Campo de e-mail obrigatório">
+        <!-- Email -->
+        <input formControlName="email" type="email" id="defaultContactFormEmail" class="form-control" placeholder="E-mail">
+      </app-input>
+      <!--
+      <app-input errorMessage="Campo obrigatório">
+        <input formControlName="foto" type="file"/>
+      </app-input>
+      -->
+
+      <!-- Subject -->
+      <app-input errorMessage="Campo obrigatório">
+        <select formControlName="sexo" class="browser-default custom-select">
+            <option value="" disabled>Escolha a opção</option>
+            <option value="1" selected>Feminino</option>
+            <option value="2">Masculino</option>
+        </select>
+      </app-input>
+
+
+      <!-- Send button -->
+      <button [disabled]="usuarioForm.invalid" class="btn btn-info btn-block" type="submit">Salvar</button>
+
+    </form>
+    <!-- Default form contact -->
+  </div>
+
+</section>

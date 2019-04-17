@@ -1,0 +1,24 @@
+
+#logo{
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+}
+
+.view-cascade{
+    margin-top: -40px;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;
+    background-color: #426381;
+}
+
+.card-header-title{
+    padding: 1.6rem 1rem;
+    color: rgb(255, 255, 255)!important;
+}
+
+#esqueci-senha{
+    font-size: 12px;
+}
