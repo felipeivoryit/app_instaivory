@@ -3,7 +3,7 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" [routerLink]="'/'">
+      <a class="navbar-brand" [routerLink]="['/']">
         <img id="logo" src="assets/img/logo-branco.png">
       </a>
 
@@ -19,7 +19,7 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link">Home
+            <a class="nav-link" [routerLink]="['/home']">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>

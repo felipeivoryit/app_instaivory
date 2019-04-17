@@ -20,7 +20,7 @@ import { CompartilhadoModule } from './compartilhado/compartilhado.modulo';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

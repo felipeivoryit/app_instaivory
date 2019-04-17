@@ -48,7 +48,8 @@
                         
                         <!-- [disabled]="loginForm.invalid" -->
                         <div class="text-center">
-                          <button (click)="login()"  class="btn btn-indigo">Login</button>
+                          <button id="btnLogin" (click)="login()"  class="btn btn-indigo">Login</button>
+                          <button [routerLink]="['/usuario']" type="button" class="btn btn-outline-primary waves-effect">Criar conta</button>
                           <hr>
                             <a id="esqueci-senha" class="dark-grey-text">Esqueci minha senha.</a>
                         </div>
