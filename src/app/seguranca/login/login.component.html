@@ -33,13 +33,13 @@
                           </div>
                         <hr>
 
-                        <app-input errorMessage="Campo de e-mail obrigatório">
+                        <app-input [showTip]="false" errorMessage="Campo de e-mail obrigatório">
                           <i class="fas fa-envelope prefix grey-text"></i>
                           <input formControlName="email" type="text" id="form-email" class="form-control" autocomplete="off">
                           <label for="form-email">Seu e-mail</label>
                         </app-input>
 
-                        <app-input errorMessage="Campo obrigatório">
+                        <app-input [showTip]="false" errorMessage="Campo obrigatório">
                             <i class="fas fa-lock prefix grey-text"></i>
                             <input formControlName="password" type="password" id="form-passoword" class="form-control" autocomplete="off">
                             <label for="form-passoword">Sua senha</label>

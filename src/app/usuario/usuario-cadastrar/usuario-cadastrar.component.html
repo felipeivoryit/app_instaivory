@@ -24,7 +24,7 @@
     
       <app-input errorMessage="Campo de e-mail obrigatório">
         <!-- Email -->
-        <input formControlName="email" type="email" id="defaultContactFormEmail" class="form-control" placeholder="E-mail">
+        <input formControlName="email" type="email" id="defaultContactFormEmail" class="form-control" placeholder="E-mail" autocomplete="off">
       </app-input>
       <!--
       <app-input errorMessage="Campo obrigatório">
@@ -43,10 +43,12 @@
 
 
       <!-- Send button -->
-      <button [disabled]="usuarioForm.invalid" class="btn btn-info btn-block" type="submit">Salvar</button>
+      <button (click)="salvar()" [disabled]="usuarioForm.invalid" class="btn btn-info btn-block" type="submit">Salvar</button>
 
     </form>
     <!-- Default form contact -->
   </div>
 
 </section>
+
+<app-rodape></app-rodape>

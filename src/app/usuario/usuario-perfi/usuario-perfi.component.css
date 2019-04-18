@@ -1,0 +1,22 @@
+#section-perfil{
+    padding-top: 80px;
+    margin-right: 7px;
+    margin-left: 4px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#img-perfil{
+    margin: auto;
+    margin-top: 10px;
+    width: 160px;
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+.img-publicacoes{
+    width: 60px;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterContentChecked } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 declare var $: any
@@ -25,6 +25,10 @@ export class UsuarioCadastrarComponent implements OnInit {
         senhaConfimacao: this.fb.control('', [Validators.required])
         //foto: this.fb.control('', [Validators.required])
       })
+  }
+
+  salvar(){
+    console.log(this.usuarioForm.value)
   }
 
   
