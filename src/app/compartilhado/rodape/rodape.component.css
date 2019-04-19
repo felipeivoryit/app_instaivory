@@ -4,3 +4,9 @@ footer{
 .col-icon{
     text-align: center;
 }
+.class-footer{
+    height: 54px;
+}
+.col{
+    padding: .84rem 2.14rem;
+}

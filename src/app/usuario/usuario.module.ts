@@ -10,7 +10,9 @@ const ROUTES: Routes = [
     /*********     CADASTRO     **************/
     { path: '', component: UsuarioCadastrarComponent },
     /*********      PERFIL     **************/
-    { path: 'perfil', component: UsuarioPerfiComponent }
+    { path: 'perfil', component: UsuarioPerfiComponent },
+    /*********      BUSCAR     **************/
+    { path: 'buscar', component: UsuarioBuscarComponent }
 ]
 
 @NgModule({

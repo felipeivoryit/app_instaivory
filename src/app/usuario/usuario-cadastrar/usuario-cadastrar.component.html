@@ -1,13 +1,14 @@
 <app-menu></app-menu>
 
-<section id="section-usuario">
+<!----- Conteúdo principal da página ------->
+<section id="section-usuario" class="com-menu-rodape">
 
   <!-- Card -->
   <div class="card m-2 animated fadeInDown">
     <!-- Default form contact -->
     <form [formGroup]="usuarioForm" class="text-center border border-light p-3">
 
-      <p id="titulo" class="h4 mb-4">Cadastro</p>
+      <p id="titulo" class="h5 mb-3">Cadastro</p>
 
       <app-input errorMessage="Campo obrigatório">
         <!-- Name -->
@@ -50,5 +51,6 @@
   </div>
 
 </section>
+<!----- Conteúdo principal da página ------->
 
 <app-rodape></app-rodape>

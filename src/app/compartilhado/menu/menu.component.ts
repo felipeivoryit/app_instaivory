@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  classModalMenu = 'hidden'
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  menuVisible(status: boolean){
+    if(status){
+      this.classModalMenu = 'visible'
+    }
+    else{
+      this.classModalMenu = 'hidden'
+    }
   }
 
 }

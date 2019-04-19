@@ -1,68 +1,72 @@
-<!-- Full Page Intro -->
-<div class="view full-page-intro">
-  <!-- Mask & flexbox options-->
-  <div class="mask d-flex justify-content-center align-items-center">
+<!----- Conteúdo principal da página ------->
+<section id="section-login">  
+  <!-- Full Page Intro -->
+  <div class="view full-page-intro">
+    <!-- Mask & flexbox options-->
+    <div class="mask d-flex justify-content-center align-items-center">
 
-      <div class="container">
+        <div class="container">
 
-          <!--Grid row-->
-          <div class="row wow fadeIn">
+            <!--Grid row-->
+            <div class="row wow fadeIn">
+                <!--Grid column-->
+              <div class="col-md-6 mb-4 white-text text-center text-md-left">
+                  <img id="logo" src="assets/img/logo.png">
+              </div>
+
               <!--Grid column-->
-            <div class="col-md-6 mb-4 white-text text-center text-md-left">
-                <img id="logo" src="assets/img/logo.png">
-            </div>
+              <div class="col-md-6 col-xl-5 mb-4">
+                  <!--Card-->
+                  <div class="card animated fadeInRight">
 
-            <!--Grid column-->
-            <div class="col-md-6 col-xl-5 mb-4">
-                <!--Card-->
-                <div class="card animated fadeInRight">
+                      <!--Card content-->
+                      <div class="card-body">
 
-                    <!--Card content-->
-                    <div class="card-body">
+                        <!-- Form -->
+                        <form [formGroup]="loginForm">
+                          <!-- Heading -->
+                          <div class="view view-cascade">
 
-                      <!-- Form -->
-                      <form [formGroup]="loginForm">
-                        <!-- Heading -->
-                        <div class="view view-cascade">
+                              <!-- Title -->
+                              <h3 class="card-header-title text-center">
+                                  <strong>{{titulo}}</strong>
+                              </h3>
 
-                            <!-- Title -->
-                            <h3 class="card-header-title text-center">
-                                <strong>{{titulo}}</strong>
-                            </h3>
-
-                          </div>
-                        <hr>
-
-                        <app-input [showTip]="false" errorMessage="Campo de e-mail obrigatório">
-                          <i class="fas fa-envelope prefix grey-text"></i>
-                          <input formControlName="email" type="text" id="form-email" class="form-control" autocomplete="off">
-                          <label for="form-email">Seu e-mail</label>
-                        </app-input>
-
-                        <app-input [showTip]="false" errorMessage="Campo obrigatório">
-                            <i class="fas fa-lock prefix grey-text"></i>
-                            <input formControlName="password" type="password" id="form-passoword" class="form-control" autocomplete="off">
-                            <label for="form-passoword">Sua senha</label>
-                        </app-input>
-
-                        
-                        <!-- [disabled]="loginForm.invalid" -->
-                        <div class="text-center">
-                          <button id="btnLogin" (click)="login()"  class="btn btn-indigo">Login</button>
-                          <button [routerLink]="['/usuario']" type="button" class="btn btn-outline-primary waves-effect">Criar conta</button>
+                            </div>
                           <hr>
-                            <a id="esqueci-senha" class="dark-grey-text">Esqueci minha senha.</a>
-                        </div>
 
-                      </form>
-                      <!-- Form -->
+                          <app-input [showTip]="false" errorMessage="Campo de e-mail obrigatório">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <input formControlName="email" type="text" id="form-email" class="form-control" autocomplete="off">
+                            <label for="form-email">Seu e-mail</label>
+                          </app-input>
 
-                    </div>
+                          <app-input [showTip]="false" errorMessage="Campo obrigatório">
+                              <i class="fas fa-lock prefix grey-text"></i>
+                              <input formControlName="password" type="password" id="form-passoword" class="form-control" autocomplete="off">
+                              <label for="form-passoword">Sua senha</label>
+                          </app-input>
 
-                </div>
-                <!--/.Card-->
+                          
+                          <!-- [disabled]="loginForm.invalid" -->
+                          <div class="text-center">
+                            <button id="btn-login" (click)="login()"  class="btn btn-indigo">Login</button>
+                            <button [routerLink]="['/usuario']" type="button" class="btn btn-outline-primary waves-effect">Criar conta</button>
+                            <hr>
+                              <a id="esqueci-senha" class="dark-grey-text">Esqueci minha senha.</a>
+                          </div>
+
+                        </form>
+                        <!-- Form -->
+
+                      </div>
+
+                  </div>
+                  <!--/.Card-->
+              </div>
             </div>
-          </div>
-      </div>
+        </div>
+    </div>
   </div>
-</div>  
+</section> 
+<!----- Conteúdo principal da página ------->

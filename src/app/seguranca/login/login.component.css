@@ -1,7 +1,11 @@
 
+#section-login{
+    height: 100%;
+}
+
 #logo{
     width: 100%;
-    max-width: 180px;
+    max-width: 140px;
     margin: auto;
     padding-top: 10px;
 }
@@ -14,6 +18,9 @@
     border-radius: .25rem;
     background-color: #426381;
 }
+.view-cascade h3{
+    margin: 0;
+}
 
 .card-header-title{
     padding: 1.6rem 1rem;
@@ -23,6 +30,6 @@
 #esqueci-senha{
     font-size: 12px;
 }
-#btnLogin{
+#btn-login{
     width: 100%;
 }
