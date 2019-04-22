@@ -10,3 +10,7 @@
 .visible{
     display: block;
 }
+#modalMenu .modal-dialog{
+    height: 100%;
+    margin-right: 0;
+}

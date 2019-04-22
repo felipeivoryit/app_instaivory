@@ -16,10 +16,11 @@ export class MenuComponent implements OnInit {
 
   menuVisible(status: boolean){
     if(status){
-      this.classModalMenu = 'visible'
+      this.classModalMenu = 'fadeInRight visible'
     }
     else{
-      this.classModalMenu = 'hidden'
+      console.log('fechar')
+      this.classModalMenu = 'fadeOutRight visible'
     }
   }
 
