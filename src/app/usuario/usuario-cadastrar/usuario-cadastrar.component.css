@@ -16,3 +16,14 @@
     box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
     border-radius: 0.36rem;
 }
+#img-perfil{
+    width: 140px; 
+}
+#btn-remover-img-perfil{
+    width: 100%
+}
+#btn-add-img-perfil{
+   height: 140px;
+   width: 140px;
+   margin: auto; 
+}

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Usuario } from '../usuario.model';
 
 declare var $: any
 
@@ -11,6 +12,10 @@ declare var $: any
 export class UsuarioCadastrarComponent implements OnInit {
 
   usuarioForm: FormGroup
+  file: File
+  preview: string
+
+  @ViewChild('fileInput') fileInput: ElementRef;
 
   constructor(private fb: FormBuilder) { }
   
@@ -22,13 +27,35 @@ export class UsuarioCadastrarComponent implements OnInit {
         email: this.fb.control('', [Validators.required, Validators.email]),
         sexo: this.fb.control('', [Validators.required]),
         senha: this.fb.control('', [Validators.required]),
-        senhaConfimacao: this.fb.control('', [Validators.required])
-        //foto: this.fb.control('', [Validators.required])
+        senhaConfirmacao: this.fb.control('', [Validators.required]),
+        foto: null,
       })
   }
 
-  salvar(){
-    console.log(this.usuarioForm.value)
+  onFileChange(event) {
+    let reader = new FileReader();
+    if(event.target.files && event.target.files.length > 0) {
+      let file = event.target.files[0];
+      reader.readAsDataURL(file);
+      reader.onload = (event: any) => {
+        this.usuarioForm.get('foto').setValue({
+          filename: file.name,
+          filetype: file.type,
+          value: (<string>reader.result).split(',')[1]
+        }),
+        this.preview = event.target.result
+      };
+    }
+  }
+
+  clearFile() {
+    this.usuarioForm.get('foto').setValue(null);
+    this.fileInput.nativeElement.value = '';
+    this.preview = '';
+  }
+
+  salvar(usuario: Usuario){
+    console.log(usuario)
   }
 
   

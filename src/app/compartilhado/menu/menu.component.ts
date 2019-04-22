@@ -19,7 +19,6 @@ export class MenuComponent implements OnInit {
       this.classModalMenu = 'fadeInRight visible'
     }
     else{
-      console.log('fechar')
       this.classModalMenu = 'fadeOutRight visible'
     }
   }

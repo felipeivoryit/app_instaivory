@@ -14,3 +14,12 @@
     height: 100%;
     margin-right: 0;
 }
+#modalMenu .modal-body, .modal-footer{
+    background-color: #426381;
+}
+#menu-mobile{
+    box-shadow: unset;
+}
+#input-pesquisar{
+    margin-bottom: 20px;
+}

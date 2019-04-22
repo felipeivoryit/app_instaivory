@@ -6,9 +6,45 @@
   <!-- Card -->
   <div class="card m-2 animated fadeInDown">
     <!-- Default form contact -->
-    <form [formGroup]="usuarioForm" class="text-center border border-light p-3">
+    <form [formGroup]="usuarioForm" (submit)="salvar(usuarioForm.value)" class="border border-light p-3">
 
       <p id="titulo" class="h5 mb-3">Cadastro</p>
+
+      <!-- Foto perfil -->
+      <!--
+      <a class="btn-floating btn-lg pink lighten-1 mt-0 float-left">
+        <span>
+          <i class="fas fa-paperclip" aria-hidden="true"></i>
+        </span>
+      </a>
+      -->
+      <div *ngIf="!preview" class="row">
+        <button id="btn-add-img-perfil" type="button" (click)="fileInput.click()" class="btn btn-info rounded-circle">
+            <i class="fa fa-image fa-2x align-middle"></i>
+        </button>
+      </div>
+
+      <div *ngIf="preview" class="row">
+        <div class="col-xl text-center">
+          <img id="img-perfil" class="img-fluid z-depth-1 rounded-circle" src="{{preview}}" alt="">
+        </div>
+        <div class="col-xl mt-2">
+          <button id="btn-remover-img-perfil" type="button" class="btn btn-sm btn-default" (click)="clearFile()">Remover arquivo</button>
+        </div>   
+      </div>
+
+      <div class="form-group">
+          <input
+                hidden
+                type="file"
+                id="foto"
+                accept="image/*" 
+                (change)="onFileChange($event)" 
+                #fileInput
+          >
+        </div>
+
+      <!-- Foto perfil -->
 
       <app-input errorMessage="Campo obrigatório">
         <!-- Name -->
@@ -20,19 +56,14 @@
       </app-input>
 
       <app-input errorMessage="Campo obrigatório">
-          <input formControlName="senhaConfimacao" type="password" class="form-control" placeholder="Confirmação senha" autocomplete="off">
+          <input formControlName="senhaConfirmacao" type="password" class="form-control" placeholder="Confirmação senha" autocomplete="off">
       </app-input>
     
       <app-input errorMessage="Campo de e-mail obrigatório">
         <!-- Email -->
         <input formControlName="email" type="email" id="defaultContactFormEmail" class="form-control" placeholder="E-mail" autocomplete="off">
       </app-input>
-      <!--
-      <app-input errorMessage="Campo obrigatório">
-        <input formControlName="foto" type="file"/>
-      </app-input>
-      -->
-
+            
       <!-- Subject -->
       <app-input errorMessage="Campo obrigatório">
         <select formControlName="sexo" class="browser-default custom-select">
@@ -44,7 +75,7 @@
 
 
       <!-- Send button -->
-      <button (click)="salvar()" [disabled]="usuarioForm.invalid" class="btn btn-info btn-block" type="submit">Salvar</button>
+      <button [disabled]="usuarioForm.invalid" class="btn btn-info btn-block" type="submit">Salvar</button>
 
     </form>
     <!-- Default form contact -->
