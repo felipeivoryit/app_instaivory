@@ -30,6 +30,7 @@ export class UsuarioCadastrarComponent implements OnInit {
         senhaConfirmacao: this.fb.control('', [Validators.required]),
         foto: null,
       })
+
   }
 
   onFileChange(event) {

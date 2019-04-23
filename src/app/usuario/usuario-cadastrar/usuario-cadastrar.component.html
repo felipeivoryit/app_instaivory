@@ -46,25 +46,27 @@
 
       <!-- Foto perfil -->
 
+      <!-- Name -->
       <app-input errorMessage="Campo obrigatório">
-        <!-- Name -->
         <input id="nome" type="text" formControlName="nome" class="form-control" placeholder="Nome" autocomplete="off">
       </app-input>
 
+      <!-- Email -->
+      <app-input errorMessage="Campo de e-mail obrigatório">
+        <input formControlName="email" type="email" id="defaultContactFormEmail" class="form-control" placeholder="E-mail" autocomplete="off">
+      </app-input>
+
+      <!-- Senha -->
       <app-input errorMessage="Campo obrigatório">
           <input formControlName="senha" type="password" class="form-control" placeholder="Senha" autocomplete="off">
       </app-input>
 
+      <!-- Confirmação de senha -->
       <app-input errorMessage="Campo obrigatório">
           <input formControlName="senhaConfirmacao" type="password" class="form-control" placeholder="Confirmação senha" autocomplete="off">
       </app-input>
-    
-      <app-input errorMessage="Campo de e-mail obrigatório">
-        <!-- Email -->
-        <input formControlName="email" type="email" id="defaultContactFormEmail" class="form-control" placeholder="E-mail" autocomplete="off">
-      </app-input>
-            
-      <!-- Subject -->
+                
+      <!-- Sexo -->
       <app-input errorMessage="Campo obrigatório">
         <select formControlName="sexo" class="browser-default custom-select">
             <option value="" disabled>Escolha a opção</option>
@@ -80,7 +82,7 @@
     </form>
     <!-- Default form contact -->
   </div>
-
+  
 </section>
 <!----- Conteúdo principal da página ------->
 

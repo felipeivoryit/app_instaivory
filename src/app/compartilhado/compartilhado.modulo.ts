@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { RodapeComponent } from './rodape/rodape.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { UsuarioService } from '../usuario/usuario.service';
 
 @NgModule({
   imports: [
@@ -16,15 +18,19 @@ import { RodapeComponent } from './rodape/rodape.component';
   declarations: [
     MenuComponent,
     RodapeComponent,
-    InputComponent
+    InputComponent,
+    MapaComponent
   ],
   exports: [
+    // Component
     MenuComponent,
     RodapeComponent,
     InputComponent,
+    MapaComponent,
+    // Module
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class CompartilhadoModule {

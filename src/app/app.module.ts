@@ -11,21 +11,24 @@ import { ROUTES } from './app.routes';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { UsuarioService } from './usuario/usuario.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     CompartilhadoModule.forRoot(),
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
     NgxSpinnerModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

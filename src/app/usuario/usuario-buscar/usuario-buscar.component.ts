@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../usuario.service';
+import { Usuario } from '../usuario.model';
+
 
 @Component({
   selector: 'app-ivory-usuario-buscar',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioBuscarComponent implements OnInit {
 
-  constructor() { }
+  usuarios: Usuario[]
+  error: any
+
+  constructor(private UsuarioService: UsuarioService) { }
 
   ngOnInit() {
+    this.UsuarioService.getInstaivoryUsuarios().subscribe(
+      (usuarios: Usuario[]) => this.usuarios = usuarios,
+      (error: any) => this.error = error,
+      () => {
+        console.log(this.usuarios)
+      }
+    )
+    
   }
 
 }

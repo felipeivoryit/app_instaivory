@@ -16,46 +16,11 @@
     
     <hr>
     <ul class="list-group">
-      <li class="list-group-item">
+      <li *ngFor="let usuario of usuarios" class="list-group-item">
         <h6 class="card-title">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 img-thumbnail rounded-circle img-publicacoes"
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-fluid z-depth-1 img-thumbnail rounded-circle img-publicacoes"
           alt="Responsive image">
-          Gabriela
-        </h6>
-      </li>
-      <li class="list-group-item">
-        <h6 class="card-title">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 img-thumbnail rounded-circle img-publicacoes"
-          alt="Responsive image">
-          Gabriela
-        </h6>
-      </li>
-      <li class="list-group-item">
-        <h6 class="card-title">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 img-thumbnail rounded-circle img-publicacoes"
-          alt="Responsive image">
-          Gabriela
-        </h6>
-      </li>
-      <li class="list-group-item">
-        <h6 class="card-title">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 img-thumbnail rounded-circle img-publicacoes"
-          alt="Responsive image">
-          Gabriela
-        </h6>
-      </li>
-      <li class="list-group-item">
-        <h6 class="card-title">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 img-thumbnail rounded-circle img-publicacoes"
-          alt="Responsive image">
-          Gabriela
-        </h6>
-      </li>
-      <li class="list-group-item">
-        <h6 class="card-title">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1 img-thumbnail rounded-circle img-publicacoes"
-          alt="Responsive image">
-          Gabriela
+          {{usuario.nome}}
         </h6>
       </li>
     </ul>
