@@ -11,17 +11,16 @@ import { Usuario } from '../usuario.model';
 export class UsuarioBuscarComponent implements OnInit {
 
   usuarios: Usuario[]
-  error: any
 
-  constructor(private UsuarioService: UsuarioService) { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
-    this.UsuarioService.getInstaivoryUsuarios().subscribe(
+    this.usuarioService.getInstaivoryUsuarios().subscribe(
       (usuarios: Usuario[]) => this.usuarios = usuarios,
-      (error: any) => this.error = error,
-      () => {
-        console.log(this.usuarios)
+      error => {
+        console.log(`Erro ${error.status} ao acessar a URL ${error.url} - ${error.statusText}`);
       }
+
     )
     
   }

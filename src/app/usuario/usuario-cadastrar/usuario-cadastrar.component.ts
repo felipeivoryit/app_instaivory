@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Usuario } from '../usuario.model';
+import { UsuarioService } from '../usuario.service';
 
 declare var $: any
 
@@ -14,10 +15,11 @@ export class UsuarioCadastrarComponent implements OnInit {
   usuarioForm: FormGroup
   file: File
   preview: string
+  jsonData: any;
 
   @ViewChild('fileInput') fileInput: ElementRef;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private usuarioService: UsuarioService) { }
   
 
   ngOnInit() {
@@ -56,7 +58,16 @@ export class UsuarioCadastrarComponent implements OnInit {
   }
 
   salvar(usuario: Usuario){
-    console.log(usuario)
+    this.usuarioService.createInstaivoryUsuario(usuario)
+                        .subscribe(
+                          result => {
+                            this.jsonData= result; 
+                            console.log("Success : "+ this.jsonData); 
+                          },
+                          error => {
+                            console.log(`Erro ${error.status} ao acessar a URL ${error.url} - ${error.statusText}`);
+                        }
+                        )
   }
 
   

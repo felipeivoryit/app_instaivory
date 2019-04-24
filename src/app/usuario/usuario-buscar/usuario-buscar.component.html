@@ -15,7 +15,7 @@
     </div>
     
     <hr>
-    <ul class="list-group">
+    <ul *ngIf="usuarios; else semUsuarios" class="list-group">
       <li *ngFor="let usuario of usuarios" class="list-group-item">
         <h6 class="card-title">
           <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="img-fluid z-depth-1 img-thumbnail rounded-circle img-publicacoes"
@@ -24,6 +24,9 @@
         </h6>
       </li>
     </ul>
+    <ng-template #semUsuarios>
+      Usuarios não encontrados.
+    </ng-template>
   </div>
 </div>
 <!-- Card -->
