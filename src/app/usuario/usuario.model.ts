@@ -5,7 +5,7 @@ class Usuario{
         public senhaConfirmacao: string,
         public sexo: string,
         public email: string,
-        public foto?: UsuarioFoto,
+        public foto?: string,
         public id?: string
     ){}
 }

@@ -16,7 +16,7 @@ export class UsuarioBuscarComponent implements OnInit {
 
   ngOnInit() {
     this.usuarioService.getInstaivoryUsuarios().subscribe(
-      (usuarios: Usuario[]) => this.usuarios = usuarios,
+      (usuarios: Usuario[]) => {this.usuarios = usuarios; console.log(this.usuarios)},
       error => {
         console.log(`Erro ${error.status} ao acessar a URL ${error.url} - ${error.statusText}`);
       }

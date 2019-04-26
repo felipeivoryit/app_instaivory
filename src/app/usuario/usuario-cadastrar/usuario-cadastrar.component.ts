@@ -41,15 +41,14 @@ export class UsuarioCadastrarComponent implements OnInit {
       let file = event.target.files[0];
       reader.readAsDataURL(file);
       reader.onload = (event: any) => {
-        this.usuarioForm.get('foto').setValue({
-          filename: file.name,
-          filetype: file.type,
-          value: (<string>reader.result).split(',')[1]
-        }),
+        this.usuarioForm.get('foto').setValue(
+          <string>reader.result
+        ),
         this.preview = event.target.result
       };
     }
   }
+  
 
   clearFile() {
     this.usuarioForm.get('foto').setValue(null);
@@ -58,6 +57,7 @@ export class UsuarioCadastrarComponent implements OnInit {
   }
 
   salvar(usuario: Usuario){
+
     this.usuarioService.createInstaivoryUsuario(usuario)
                         .subscribe(
                           result => {
@@ -68,6 +68,7 @@ export class UsuarioCadastrarComponent implements OnInit {
                             console.log(`Erro ${error.status} ao acessar a URL ${error.url} - ${error.statusText}`);
                         }
                         )
+                        
   }
 
   
